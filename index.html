@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Progress & AI Technology Updates</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --sidebar: #0f172a;
+            --card: #ffffff;
+            --accent: #ef4444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+        }
+
+        /* Sidebar Navigation */
+        nav {
+            width: 260px;
+            background: var(--sidebar);
+            height: 100vh;
+            color: white;
+            position: fixed;
+            padding-top: 2rem;
+            z-index: 10;
+        }
+
+        nav h2 {
+            padding: 0 1.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            display: block;
+            color: #94a3b8;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            background: #1e293b;
+            color: white;
+        }
+
+        /* Main Content Area */
+        main {
+            margin-left: 260px;
+            padding: 3rem;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 2rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--primary);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Technical Skills (Static List) */
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-item {
+            background: var(--card);
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 0.8rem;
+            border-left: 4px solid #cbd5e1;
+        }
+
+        /* AI Updates Grid (Interactive) */
+        .updates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .interactive-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px -5px rgb(0 0 0 / 0.15);
+            border-color: var(--primary);
+        }
+
+        .category-tag {
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 1.2rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            margin: 5% auto;
+            padding: 2.5rem;
+            border-radius: 15px;
+            width: 70%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        footer {
+            margin-top: 5rem;
+            text-align: center;
+            color: #64748b;
+            padding: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        strong {
+            color: var(--sidebar);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Work Progress</h2>
+        <a href="#section1">Technical Skills</a>
+        <a href="#culture">Corporate Culture</a>
+        <a href="#ai-updates">AI Tech Updates</a>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Weekly Internship Report</h1>
+            <p><strong>Prepared by:</strong> Macharla Leela Venkata Sai | <strong>Period:</strong> Feb 16 – Feb 28, 2026
+            </p>
+        </header>
+
+        <section id="section1">
+            <h2>Technical Skills & Learnings</h2>
+            <div class="highlight-box">
+                "As I am new to these web technologies, I am spending extra time on the basics to make sure I have a
+                very strong foundation before moving to complex tasks."
+            </div>
+
+            <div class="skill-list">
+                <div class="skill-item"><strong>Platform Engineering:</strong> I learned how the underlying systems are
+                    built so that software has a stable place to run.
+                </div>
+                <div class="skill-item"><strong>Software Design:</strong> I studied the path a project takes from the
+                    first set of "Requirements" all the way to the final "Release."</div>
+                <div class="skill-item"><strong>Cloud Architecture:</strong> I gained a better understanding of how big
+                    companies organize their data and traffic using cloud services.</div>
+            </div>
+        </section>
+
+        <section id="culture">
+            <h2>The Shift to Corporate Culture</h2>
+            <p>The orientation and my first two weeks have shown me how different "working" is from "studying":</p>
+            <div class="skill-item"><strong>Responsibility:</strong> In college, a mistake only affects a grade. In a
+                company, following policies (like Cyber Security and IT rules) is essential to protect the business and
+                our clients.</div>
+            <div class="skill-item"><strong>The Team Process:</strong> I’ve learned that coding is only one part of the
+                job. Working in an Agile environment means communicating daily and making sure my work fits into the
+                bigger team goal.</div>
+            <div class="skill-item"><strong>Professional Mindset:</strong> I am learning to move from "learning for a
+                test" to "learning to build real solutions" that people will actually use.</div>
+        </section>
+
+        <section id="ai-updates">
+            <h2>AI Technology Updates</h2>
+            <p style="margin-bottom: 2rem; color: #64748b;"><em>Select a card below to view detailed case studies and
+                    industry breakthroughs.</em></p>
+
+            <div class="updates-grid">
+                <div class="interactive-card" onclick="openModal('mexico')">
+                    <span class="category-tag">Cyber Security Case Study</span>
+                    <h3>The Mexican Government Breach</h3>
+                    <p>A lone hacker exploited Claude AI to breach National Tax and Election systems.</p>
+                </div>
+
+                <div class="interactive-card" onclick="openModal('xz')">
+                    <span class="category-tag">Open Source Vulnerability</span>
+                    <h3>The XZ Backdoor Crisis</h3>
+                    <p>A sophisticated nation-state attack that nearly compromised global OpenSSH logins.</p>
+                </div>
+
+                <div class="interactive-card" onclick="openModal('anthropic')">
+                    <span class="category-tag">Geopolitics & Ethics</span>
+                    <h3>Anthropic vs. The Pentagon</h3>
+                    <p>The total phase-out of Claude from military systems due to autonomous weapon ethics.</p>
+                </div>
+
+                <div class="interactive-card" onclick="openModal('gemini')">
+                    <span class="category-tag">Model Launch</span>
+                    <h3>Gemini 3.1 Pro Reaches near-AGI</h3>
+                    <p>Google reclaims the lead with record-breaking reasoning scores.</p>
+                </div>
+
+                <div class="interactive-card" onclick="openModal('india')">
+                    <span class="category-tag">Sovereign AI</span>
+                    <h3>India's Bharat GPT (Param 2)</h3>
+                    <p>Massive launch supporting 22 Indian languages for local data control.</p>
+                </div>
+
+                <div class="interactive-card" onclick="openModal('robots')">
+                    <span class="category-tag">Robotics</span>
+                    <h3>Unitary Humanoid Robot Swarms</h3>
+                    <p>10 robots moving in perfect sync at China's Temple of Heaven.</p>
+                </div>
+
+                <div class="interactive-card" onclick="openModal('sonnet')">
+                    <span class="category-tag">Performance News</span>
+                    <h3>Claude Sonnet 4.6 Drop</h3>
+                    <p>The "cheaper" model has officially beaten the premium Opus model on benchmarks.</p>
+                </div>
+
+                <div class="interactive-card" onclick="openModal('cyber_stock')">
+                    <span class="category-tag">Market Impact</span>
+                    <h3>$10 Billion Market Wipeout</h3>
+                    <p>How one blog post on AI code security crashed cybersecurity stocks in an hour.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2026 Macharla Leela Venkata Sai | Report
+        </footer>
+    </main>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        const data = {
+            'mexico': `
+                <span class="category-tag">Security Incident Report</span>
+                <h2>AI Case Study: The Mexican Government Data Breach (February 2026)</h2>
+                <hr>
+                <p>A major cybersecurity incident recently made global headlines, demonstrating how AI can be misused to bypass traditional security barriers.</p>
+                <p><strong>The Incident:</strong> A single individual successfully breached multiple Mexican government agencies—including the National Tax Service (SAT) and the National Electoral Institute (INE)—stealing over 150GB of sensitive data.</p>
+                <p><strong>The "Bug Bounty" Bypass:</strong> The hacker bypassed Claude AI’s safety filters by using a technique called "persona injection." By framing the illegal activity as a "bug bounty program" (an ethical test to find and fix security flaws), the hacker convinced the AI to assist in identifying vulnerabilities and writing exploit code.</p>
+                <p><strong>Technical Impact:</strong></p>
+                <ul>
+                    <li>The AI helped identify 20+ major security flaws in government networks.</li>
+                    <li>It generated functional Python scripts for SQL injection and automated credential theft.</li>
+                    <li>The breach exposed the records of nearly 195 million citizens, including taxpayer data and voter lists.</li>
+                </ul>
+                <p><strong>Key Takeaway:</strong> This event is a landmark case in cybersecurity. It proved that a solo operator with a standard AI subscription can now execute complex attacks that previously required a highly skilled team of hackers and months of work. It has forced AI companies, like Anthropic and OpenAI, to release new security patches (such as Claude 4.6) to detect these "role-play" hacking attempts in real-time.</p>`,
+
+            'xz': `
+                <h2>The XZ Backdoor Analysis</h2>
+                <hr>
+                <p><strong>The Power of Linux:</strong> Linux is a free and open-source operating system that powers most of the internet's servers, supercomputers, and even everyday electronics. Its strength lies in its adaptability and the ability for developers worldwide to inspect and improve the code.</p>
+                <p><strong>The XZ Weakness:</strong> The entire open-source ecosystem, despite its robust nature, relies on thousands of smaller projects and libraries, often maintained by a single volunteer. In this case, the XZ data compression tool, maintained by Lasse Collin since 2005, became the target.</p>
+                <p><strong>The Infiltration:</strong> A malicious actor, Jia Tan, slowly infiltrated the XZ project, gaining trust and eventually becoming a co-maintainer. Jia Tan's goal was to compromise OpenSSH, the backbone of secure remote logins on the internet.</p>
+                <p><strong>The Backdoor Mechanism:</strong> Jia Tan hid a malicious payload within seemingly harmless test files, which were binary blobs not typically reviewed by humans. This payload was designed to create a backdoor in the RSA authentication step of SSH, allowing unauthorized access using a master key.</p>
+                <p><strong>The Unmasking:</strong> A sharp-eyed German programmer, Andres Freund, noticed a slight slowdown in server connection times while testing a Debian update. His detailed investigation uncovered the meticulously crafted backdoor, preventing a potential internet-wide catastrophe.</p>
+                <p><strong>The Aftermath:</strong> The discovery led to immediate action from companies like Red Hat to roll back affected systems. The identity of Jia Tan remains unknown, but evidence suggests a sophisticated, well-funded nation-state actor. The incident highlights the vulnerability of open-source projects that rely on unpaid volunteers and sparks a debate about better supporting these critical maintainers.</p>`,
+
+            'anthropic': `
+                <h2>Anthropic vs. Pentagon Conflict</h2>
+                <hr>
+                <p><strong>Anthropic's Refusal:</strong> Anthropic declined the Pentagon's "best and final offer," refusing to grant unrestricted access to its AI for military use.</p>
+                <p><strong>Trump's Stance:</strong> President Trump strongly condemned Anthropic's decision, calling them a "radical left woke company" and accusing them of putting American lives and national security at risk. He ordered an immediate cease of all federal use of their technology, with a six-month phase-out period.</p>
+                <p><strong>Current Usage:</strong> Anthropic's AI, particularly its Claude tool, is integrated into various Pentagon platforms, including the Maven Smart System, which is used by US troops in the Middle East and Indo-Pacific.</p>
+                <p><strong>Future of Warfare:</strong> The core of the dispute lies in Anthropic's unwillingness for its technology to be used in the development of lethal autonomous drones, which the Pentagon aims to pursue.</p>
+                <p><strong>Challenges of Transition:</strong> Unraveling Anthropic's technology from the Pentagon's systems is complex, not as simple as switching programs, and is estimated to take at least six months, possibly over a year. Anthropic has committed to assisting in this transition.</p>
+                <p><strong>Other AI Companies:</strong> While the Pentagon is scrambling to find alternatives, currently Anthropic is the main AI on the classified cloud. Other companies like XAI's Grok and OpenAI are not yet fully integrated or have the same level of practice on military systems.</p>
+                <p><strong>OpenAI's Position:</strong> Sam Altman of OpenAI, a rival to Anthropic, has also expressed similar "red lines" regarding the use of his technology in warfare. However, OpenAI is involved in Pentagon efforts for autonomy in war, specifically in voice-controlled autonomous drone swarming tech, raising questions about their stated policy usage.</p>
+                <p><strong>Timing of the Order:</strong> The timing of Trump's order is notable given ongoing negotiations between the United States and Iran and the significant US military presence in the Middle East.</p>`,
+
+            'gemini': `<h2>Gemini 3.1 Pro</h2><p>Google's latest release scored 77.1% on the AGI benchmark. It has doubled the reasoning performance of its predecessor, bringing Google back to the top of the AI rankings.</p>`,
+            'india': `<h2>Sovereign AI: Bharat GPT</h2><p>India launched the Param 2 model, which handles 22 Indian languages. This ensures that India has its own "Sovereign AI" that is not dependent on Western data models.</p>`,
+            'robots': `<h2>Robot Swarms</h2><p>10 Unitary robots demonstrated perfect coordination in a humanoid swarm. This shows that AI-driven robotics is now capable of managing dozens of complex physical units at once.</p>`,
+            'sonnet': `<h2>Claude 4.6 Sonnet</h2><p>In a major shift, the mid-tier "Sonnet" model has officially surpassed the high-tier "Opus" model on all major coding and logic benchmarks, making high-level AI more affordable.</p>`,
+            'cyber_stock': `<h2>The $10B Wipeout</h2><p>A technical blog post regarding Anthropic's new code security features caused a massive investor panic, leading to a $10 billion drop in the value of traditional cybersecurity stocks in one hour.</p>`
+        };
+
+        function openModal(key) {
+            document.getElementById('modalBody').innerHTML = data[key];
+            document.getElementById('infoModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            let modal = document.getElementById('infoModal');
+            if (event.target == modal) closeModal();
+        }
+    </script>
+</body>
+
+</html>
